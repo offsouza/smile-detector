@@ -15,7 +15,8 @@ Pronto, agora basta executar o arquivo app.py:
 
 ## Overview 
 
-Foi utilizado a linguagem python para o desenvolvimento do programa. 
+Foi utilizado a linguagem python para o desenvolvimento do programa e o banco de dados <banco>, algumas imagens do banco de dados:
+  
 
 Primeiramente foi relizado a leitura dos documentos .txt que indicava quais imagens deveriam ser usadas no teste. Assim foi gerados 2 listas, uma com nomes das imagens com pessoas sorrindo e outra que não, em seguida foi dividido cada lista em dados de treinamento, teste e validação. Obtendo assim 6 listas:
 
@@ -42,14 +43,14 @@ Foi colocado para relizar o treinamento durante 10 epocas, porém devido para um
   
 <grafico>
   
-Após o treima
+Após o treinamento foi feito a predição no dados de teste no qual conseguiu um precisão de 96,04% de acerto na classificação.
 
 ## Especificações da máquina utilizada para o treinamento  
 
-OS: Ubuntu 16.04 x64
-RAM: 8G
-Processador; Intek Core i5 2.5GHz x4
-GPU: Nvidia GeForce 940MX 2G
+-OS: Ubuntu 16.04 x64
+-RAM: 8G
+-Processador; Intek Core i5 2.5GHz x4
+-PU: Nvidia GeForce 940MX 2G
 
 O código foi executado tanto na GPU Nvidia quanto na CPU Intel.
 
