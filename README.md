@@ -8,14 +8,20 @@ Primeiro instale as bibliotecas necessárias executando o comando abaixo (recome
 > pip install -r req.txt
 
 
-Pronto, agora basta executar o arquivo app.py:
+Pronto, agora basta executar o arquivo app.py,
 
 
 > python app.py
 
+ou executar o jupyter notebook `App.ipynb`.
+
 ## Overview 
 
 Foi utilizado a linguagem python para o desenvolvimento do programa e o banco de dados <banco>, algumas imagens do banco de dados:
+  
+<p align="center">
+  <img width="360" height="288" src="https://github.com/offsouza/smile-detector/blob/master/images/faces.png">
+</p>
   
 
 Primeiramente foi relizado a leitura dos documentos .txt que indicava quais imagens deveriam ser usadas no teste. Assim foi gerados 2 listas, uma com nomes das imagens com pessoas sorrindo e outra que não, em seguida foi dividido cada lista em dados de treinamento, teste e validação. Obtendo assim 6 listas:
@@ -35,22 +41,31 @@ O próximo passo foi criar as pastas que receberá as imagens de cada lista, ent
 
 O para realizar detecção para saber se as imagens são de pessoas sorrindo ou não, foi utilizando modelo de Rede Neural Convolucional (CNN), resumo da rede:
 
-<image>
+<p align="center">
+  <img width="548" height="472" src="https://github.com/offsouza/smile-detector/blob/master/images/summary">
+</p>
 
 Foi colocado para relizar o treinamento durante 10 epocas, porém devido para um parametro adicionado EarlyStopping, que ele para o treinamento se caso começar a dectar overfitting.
-
-<image trainamento>
+<p align="center">
+  <img width="510" height="250" src="https://github.com/offsouza/smile-detector/blob/master/images/fit">
+</p>
   
-<grafico>
+<p align="center">
+  <img width="800" height="500" src="https://github.com/offsouza/smile-detector/blob/master/images/plot1.png">
+</p>
   
 Após o treinamento foi feito a predição no dados de teste no qual conseguiu um precisão de 96,04% de acerto na classificação.
 
+<p align="center">
+  <img width="306" height="275" src="https://github.com/offsouza/smile-detector/blob/master/images/smile.png">
+</p>
+
 ## Especificações da máquina utilizada para o treinamento  
 
--OS: Ubuntu 16.04 x64
--RAM: 8G
--Processador; Intek Core i5 2.5GHz x4
--PU: Nvidia GeForce 940MX 2G
+- OS: Ubuntu 16.04 x64
+- RAM: 8G
+- Processador; Intek Core i5 2.5GHz x4
+- PU: Nvidia GeForce 940MX 2G
 
 O código foi executado tanto na GPU Nvidia quanto na CPU Intel.
 
