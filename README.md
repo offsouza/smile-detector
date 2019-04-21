@@ -7,6 +7,7 @@ Primeiro instale as bibliotecas necessárias executando o comando abaixo (recome
 
 > pip install -r req.txt
 
+Depois, extraia o arquivo que contém as imagens `lfwcrop_grey.zip`.
 
 Pronto, agora basta executar o arquivo app.py,
 
@@ -17,7 +18,7 @@ ou executar o jupyter notebook `App.ipynb`.
 
 ## Overview 
 
-Foi utilizado a linguagem python para o desenvolvimento do programa e o banco de dados <banco>, algumas imagens do banco de dados:
+Foi utilizado a linguagem python para o desenvolvimento do programa e o banco de dados [LFWcrop Face Dataset] (http://conradsanderson.id.au/lfwcrop/), algumas imagens do banco de dados:
   
 <p align="center">
   <img width="360" height="288" src="https://github.com/offsouza/smile-detector/blob/master/images/faces.png">
