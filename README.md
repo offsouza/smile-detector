@@ -18,7 +18,7 @@ ou executar o jupyter notebook `App.ipynb`.
 
 ## Overview 
 
-Foi utilizado a linguagem python para o desenvolvimento do programa e o banco de dados [LFWcrop Face Dataset] (http://conradsanderson.id.au/lfwcrop/), algumas imagens do banco de dados:
+Foi utilizado a linguagem python para o desenvolvimento do programa e o banco de dados [LFWcrop Face Dataset](http://conradsanderson.id.au/lfwcrop/). Abaixo algumas imagens do banco de dados:
   
 <p align="center">
   <img width="360" height="288" src="https://github.com/offsouza/smile-detector/blob/master/images/faces.png">
@@ -35,18 +35,18 @@ Primeiramente foi relizado a leitura dos documentos .txt que indicava quais imag
 - test_nosmile 
 - val_nosmile
 
-O próximo passo foi criar as pastas que receberá as imagens de cada lista, então é criado os diretorios Train, Test e Val e dentro de cada um foi criado mais duas pasta smile e nosmile. Em seguida, é feito uma copia da imagens do dataset original <data> e é movido essas copias para as pastas de acordo com a lista que ela pertence.
+O próximo passo foi criar as pastas que receberá as imagens de cada lista, então é criado os diretorios Train, Test e Val e dentro de cada uma foi criado mais duas pasta smile e nosmile. Em seguida, é feito uma copia da imagens do dataset original e é movido essas copias para as pastas de acordo com a lista que ela pertence.
   
-É realizado esse procedimento, para que os dados estejam de acordo com o que a função de pré processamento do pacote Keras ImageDataGenerator.flow_from_directory solicita, foi usado essa método pois ela ajuda no pré processamento da imagens. Além disso, devido o nosso conjunto de dados não ser muito grande, realizamos com essa função o aumento artificialmente do conjunto de dados. 
+É realizado esse procedimento para que os dados estejam de acordo com o que a função de pré processamento  ImageDataGenerator.flow_from_directory do pacote Keras solicita, foi usado esse método pois ele auxilia no pré processamento da imagens. Além disso, devido o nosso conjunto de dados não ser muito grande, realizamos também com essa função o aumento artificialmente do conjunto de dados. 
 
-
-O para realizar detecção para saber se as imagens são de pessoas sorrindo ou não, foi utilizando modelo de Rede Neural Convolucional (CNN), resumo da rede:
+Para realizar a predição a fim de saber se as imagens são de pessoas sorrindo ou não nas imagens, foi utilizando modelo de Rede Neural Convolucional (CNN) em que podemos ver resumo da rede abaixo:
 
 <p align="center">
   <img width="548" height="472" src="https://github.com/offsouza/smile-detector/blob/master/images/summary">
 </p>
 
-Foi colocado para relizar o treinamento durante 10 epocas, porém devido para um parametro adicionado EarlyStopping, que ele para o treinamento se caso começar a dectar overfitting.
+Foi colocado para relizar o treinamento durante 10 epocas, porém devido para um parâmetro adicionado `EarlyStopping`, que ele para o treinamento se caso começar a dectar overfitting.
+
 <p align="center">
   <img width="510" height="250" src="https://github.com/offsouza/smile-detector/blob/master/images/fit">
 </p>
@@ -55,7 +55,7 @@ Foi colocado para relizar o treinamento durante 10 epocas, porém devido para um
   <img width="800" height="500" src="https://github.com/offsouza/smile-detector/blob/master/images/plot1.png">
 </p>
   
-Após o treinamento foi feito a predição no dados de teste no qual conseguiu um precisão de 96,04% de acerto na classificação.
+Após o treinamento feito a predição no dados de teste no qual conseguiu um precisão de 96,04% de acerto na classificação.
 
 <p align="center">
   <img width="306" height="275" src="https://github.com/offsouza/smile-detector/blob/master/images/smile.png">
