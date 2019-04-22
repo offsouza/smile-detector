@@ -45,7 +45,7 @@ Para realizar a predição a fim de saber se as imagens são de pessoas sorrindo
   <img width="548" height="472" src="https://github.com/offsouza/smile-detector/blob/master/images/summary">
 </p>
 
-Foi colocado para relizar o treinamento durante 10 epocas, porém devido para um parâmetro adicionado `EarlyStopping`, que ele para o treinamento se caso começar a dectar overfitting.
+Foi colocado para relizar o treinamento durante 10 epocas, porém devido para um parâmetro adicionado `EarlyStopping` em que ele para o treinamento caso a métrica `loss` esteja aumentando ao invés de estar diminuindo, que pode ser um sinal de overfitting, assim o treinamento foi parado na quinta época de treinamento.
 
 <p align="center">
   <img width="510" height="250" src="https://github.com/offsouza/smile-detector/blob/master/images/fit">
