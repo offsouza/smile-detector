@@ -148,32 +148,32 @@ finally:
 # # Copiando arquivos para as pasta de treinamento e teste
 # 
 
-# In[8]:
+# In[ ]:
 
 
 for i in train_smile: 
-    print(i)
+    #print(i)
     copyfile("./lfwcrop_grey/faces/"+i, "./lfwcrop_grey/data/train/smile/"+i[:-4]+".jpg")
     
 for i in train_nosmile: 
-    print(i)
+    #print(i)
     copyfile("./lfwcrop_grey/faces/"+i, "./lfwcrop_grey/data/train/nosmile/"+i[:-4]+".jpg")
     
     
 for i in test_smile: 
-    print(i)
+    #print(i)
     copyfile("./lfwcrop_grey/faces/"+i, "./lfwcrop_grey/data/test/smile/"+i[:-4]+".jpg")
     
 for i in test_nosmile: 
-    print(i)
+    #print(i)
     copyfile("./lfwcrop_grey/faces/"+i, "./lfwcrop_grey/data/test/nosmile/"+i[:-4]+".jpg")
     
 for i in val_smile: 
-    print(i)
+    #print(i)
     copyfile("./lfwcrop_grey/faces/"+i, "./lfwcrop_grey/data/val/smile/"+i[:-4]+".jpg")
     
 for i in val_nosmile: 
-    print(i)
+    #print(i)
     copyfile("./lfwcrop_grey/faces/"+i, "./lfwcrop_grey/data/val/nosmile/"+i[:-4]+".jpg")
 
 
@@ -314,8 +314,13 @@ model.fit_generator(data_train, steps_per_epoch=840, epochs=10, validation_steps
 # In[ ]:
 
 
-# Testado modelo com dados de testes
+# Se caso queira testar o classificador com os mesmo pesos do meu treinamento 
+# Basta descomentar a linha abaixo 
 
+#model.load_weights('./weights1.hdf5')
+
+
+# # Testado modelo com dados de testes
 
 # In[34]:
 
@@ -383,4 +388,10 @@ image = x[0]
 plt.imshow(image.reshape(64, 64), cmap=plt.get_cmap('gray'))
 plt.text(0,60, result, fontsize=24,color='red')
 plt.show()
+
+
+# In[ ]:
+
+
+
 
