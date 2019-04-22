@@ -37,9 +37,9 @@ Primeiramente foi relizado a leitura dos documentos .txt que indicava quais imag
 
 O próximo passo foi criar as pastas que receberá as imagens de cada lista, então é criado os diretorios Train, Test e Val e dentro de cada uma foi criado mais duas pasta smile e nosmile. Em seguida, é feito uma copia da imagens do dataset original e é movido essas copias para as pastas de acordo com a lista que ela pertence.
   
-É realizado esse procedimento para que os dados estejam de acordo com o que a função de pré processamento  ImageDataGenerator.flow_from_directory do pacote Keras solicita, foi usado esse método pois ele auxilia no pré processamento da imagens. Além disso, devido o nosso conjunto de dados não ser muito grande, realizamos também com essa função o aumento artificialmente do conjunto de dados. 
+É realizado esse procedimento para que os dados estejam de acordo com o que a função de pré processamento ` ImageDataGenerator.flow_from_directory` do pacote `Keras` solicita, foi usado esse método pois ele auxilia no pré processamento da imagens. Além disso, devido o nosso conjunto de dados não ser muito grande, realizamos também com essa função o aumento artificialmente do conjunto de dados. 
 
-Para realizar a predição a fim de saber se as imagens são de pessoas sorrindo ou não nas imagens, foi utilizando modelo de Rede Neural Convolucional (CNN) em que podemos ver resumo da rede abaixo:
+Para realizar a predição a fim de saber se as imagens são de pessoas sorrindo ou não, foi utilizando modelo de Rede Neural Convolucional (CNN) em que podemos ver resumo da rede abaixo:
 
 <p align="center">
   <img width="548" height="472" src="https://github.com/offsouza/smile-detector/blob/master/images/summary">
@@ -55,7 +55,7 @@ Foi colocado para relizar o treinamento durante 10 epocas, porém devido para um
   <img width="800" height="500" src="https://github.com/offsouza/smile-detector/blob/master/images/plot1.png">
 </p>
   
-Após o treinamento feito a predição no dados de teste no qual conseguiu um precisão de 96,04% de acerto na classificação.
+Após o treinamento, o modelo obteve precisão na classificação de 98,91% nos dados de treinamento, 96,46% nos dados de validação e 96,04% nos dados de teste.
 
 <p align="center">
   <img width="306" height="275" src="https://github.com/offsouza/smile-detector/blob/master/images/smile.png">
@@ -64,12 +64,12 @@ Após o treinamento feito a predição no dados de teste no qual conseguiu um pr
 ## Especificações da máquina utilizada para o treinamento  
 
 - OS: Ubuntu 16.04 x64
-- RAM: 8G
-- Processador; Intek Core i5 2.5GHz x4
-- PU: Nvidia GeForce 940MX 2G
+- RAM: 8Gb
+- Processador: Intel Core i5 2.5GHz x4
+- GPU: Nvidia GeForce 940MX 2G
 
 O código foi executado tanto na GPU Nvidia quanto na CPU Intel.
 
-Tempo de treimanto usando CPU: Cerca de 4 minutos e 22 segundos por época
+Tempo de treinamento usando CPU: Cerca de 4 minutos e 22 segundos por época
 
-Tempo de treimanto usando GPU: Cerca de 48 segundos por época
+Tempo de treinamento usando GPU: Cerca de 48 segundos por época
